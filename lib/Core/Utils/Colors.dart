@@ -10,5 +10,10 @@ class ColorApp
 
   //search bar
   static const ksearchColor = Color(0xffE4E4E4);
+  static const khintsearchColor = Color(0xff969696);
+  static const kSlideIconColor = Color(0xff5F5F5F);
+
+  //other
+  static const knotification = Color(0xffC12222);
 
 }
