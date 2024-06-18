@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+
+
+class ColorApp
+{
+  //primary color
+  static const kPrimaryColor = Color(0xffF8F8F8);
+  static const ksecondaryColor = Color(0xff292929);
+  static const kwhiteColor = Colors.white;
+
+  //search bar
+  static const ksearchColor = Color(0xffE4E4E4);
+
+}
