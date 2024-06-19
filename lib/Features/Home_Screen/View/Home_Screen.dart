@@ -11,8 +11,8 @@ import 'package:slash/Core/widgets/Search_Widget.dart';
 import 'package:slash/Core/widgets/Title_App_Widget.dart';
 import 'package:slash/Features/Home_Screen/ViewModel/home_cubit.dart';
 
-class homePage extends StatelessWidget {
-  const homePage({super.key});
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
 
   @override
   Widget build(BuildContext context) {
