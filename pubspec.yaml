@@ -37,7 +37,8 @@ dependencies:
   flutter_bloc:
   flutter_svg: ^2.0.10+1
   carousel_slider:
-  persistent_bottom_nav_bar: ^5.0.2
+  persistent_bottom_nav_bar_v2: ^5.2.3
+
 
 dev_dependencies:
   flutter_test:

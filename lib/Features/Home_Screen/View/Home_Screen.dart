@@ -1,10 +1,15 @@
-import 'package:flutter/cupertino.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash/Core/Utils/Colors.dart';
 import 'package:slash/Core/Utils/constants.dart';
-import 'package:slash/Core/widgets/Custom_TextField.dart';
-import 'package:slash/Core/widgets/Icon_Slide_Search.dart';
+import 'package:slash/Core/Utils/responsive.dart';
+import 'package:slash/Core/widgets/AppBar_Widget.dart';
+import 'package:slash/Core/widgets/Categories_Widget.dart';
+import 'package:slash/Core/widgets/Custom_List_Widget.dart';
+import 'package:slash/Core/widgets/Search_Widget.dart';
+import 'package:slash/Core/widgets/Title_App_Widget.dart';
+import 'package:slash/Features/Home_Screen/ViewModel/home_cubit.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -13,62 +18,38 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
     backgroundColor: ColorApp.kPrimaryColor,
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: SizeApp.s24,vertical: SizeApp.s72),
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top,
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(AppString.title ,style: Theme.of(context).textTheme.headlineMedium,),
-                  Row(
-                    children: [
-                      IconsApp.location,
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: SizeApp.s8),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Nasr City',style: Theme.of(context).textTheme.bodySmall,),
-                            Text('Cairo',style: Theme.of(context).textTheme.labelMedium,),
-                          ],
-                        ),
-                      ),
-                      const Icon(CupertinoIcons.chevron_down,color: ColorApp.ksecondaryColor,)
-                    ],
-                  ),
-                  Stack(
-                    alignment: Alignment.topRight,
-                      children: [
-                    Container(
-                      width: SizeApp.s12,
-                      height: SizeApp.s12,
-                      decoration: BoxDecoration(
-                          color: ColorApp.knotification ,
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    IconsApp.knotification,
-                  ]
-                 ),
+      body:  BlocBuilder<HomeCubit, HomeState>(
+        builder: (context, state) {
+          HomeCubit cubit = HomeCubit.get(context);
+          return SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(vertical: SizeApp.s72),
+            child: Column(
+              children: [
+                buildAppBar(context),
+                build_Search_Widget(context),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: Responsive.isMobile(context) ?  SizeApp.s24 : SizeWeb.s48),
+                  child: CarouselSlider(items: cubit.ListBanner,
+                      options: CarouselOptions(height: Responsive.isMobile(context) ? SizeApp.s132 : SizeApp.s272 ,  initialPage: 0,enableInfiniteScroll: false , viewportFraction: 1.0 ,reverse: false ,autoPlay: true ,autoPlayInterval: const Duration(seconds: 6) ,autoPlayAnimationDuration: const Duration(seconds: 1),autoPlayCurve:Curves.fastOutSlowIn,scrollDirection: Axis.horizontal , enlargeCenterPage: true,onPageChanged: (index, reason) {
+                        cubit.changePage(index);
+                      },) ),
+                ),
+                cubit.BuildCarsoulIndicator(),
+                BuildTitleApp(context,AppString.categ),
+                buildCategories(context),
+                BuildTitleApp(context,AppString.best_S),
+                Responsive(mobile: BuildListView(context: context,product_list: cubit.bestSelling), desktop: BuildListView_Web(context: context,product_list: cubit.bestSelling),) ,
+                BuildTitleApp(context,AppString.new_A),
+                Responsive(mobile: BuildListView(context: context,product_list: cubit.newArrival), desktop: BuildListView_Web(context: context,product_list: cubit.newArrival),) ,
+                BuildTitleApp(context,AppString.recommended),
+                Responsive(mobile: BuildListView(context: context,product_list: cubit.recommended), desktop: BuildListView_Web(context: context,product_list: cubit.recommended),) ,
 
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: CustomFormTextField(hintText: 'Search here..',onChanged: (p0) {
-                    },),
-                  ),
-                  const SizedBox(width: SizeApp.s8,),
-                  Slide_Filter,
-                ],
-              )
-            ],
-          ),
-        ),
-      ),
+
+              ],
+            ),
+          );
+        },
+      ) ,
     );
   }
 }

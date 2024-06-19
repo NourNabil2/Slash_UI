@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:slash/Core/Utils/Colors.dart';
 import 'package:slash/Core/Utils/constants.dart';
+import 'package:slash/Core/Utils/responsive.dart';
 
 BuildSeeAll(context)
 {
@@ -25,7 +26,7 @@ BuildSeeAll(context)
 BuildTitleApp(context,String title)
 {
  return Padding(
-   padding: const EdgeInsets.only(top: SizeApp.s24,bottom: SizeApp.s16),
+   padding: Responsive.isMobile(context) ? const EdgeInsets.only(top: SizeApp.s24,bottom: SizeApp.s16, right: SizeApp.s24 , left: SizeApp.s24 ) : EdgeInsets.only(top: SizeApp.s24 ,bottom: SizeApp.s16, right: SizeApp.s24 *2 , left: SizeApp.s24 *2) ,
    child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

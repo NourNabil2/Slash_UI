@@ -5,6 +5,7 @@ import 'package:slash/Core/Utils/constants.dart';
 buildCategories(context)
 {
   return SingleChildScrollView(
+    padding: const EdgeInsets.only(left: SizeApp.s24),
     scrollDirection: Axis.horizontal,
     child: Row(
       children: [

@@ -1,0 +1,113 @@
+{
+  "bestSelling": [
+    {
+      "id": 1,
+      "name": "Stitch Keychain",
+      "price": 29.99,
+      "image": "assets/images/b1.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 2,
+      "name": "Baby Girl Dress",
+      "price": 49.99,
+      "image": "assets/images/b2.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 3,
+      "name": "Infant Hair Clips",
+      "price": 19.99,
+      "image": "assets/images/b3.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 4,
+      "name": "Baby Girl Dress",
+      "price": 39.99,
+      "image": "assets/images/b2.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 5,
+      "name": "Stitch Keychain",
+      "price": 24.99,
+      "image": "assets/images/b1.png",
+      "simage": "assets/images/smallImage.png"
+    }
+  ],
+  "newArrival": [
+    {
+      "id": 1,
+      "name": "Printed bag",
+      "price": 34.99,
+      "image": "assets/images/n1.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 2,
+      "name": "Notebook",
+      "price": 54.99,
+      "image": "assets/images/n2.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 3,
+      "name": "Woolen Scarf",
+      "price": 21.99,
+      "image": "assets/images/n3.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 4,
+      "name": "Printed bag",
+      "price": 42.99,
+      "image": "assets/images/n1.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 5,
+      "name": "Notebook",
+      "price": 29.49,
+      "image": "assets/images/n2.png",
+      "simage": "assets/images/smallImage.png"
+    }
+  ],
+  "recommendedForYou": [
+    {
+      "id": 1,
+      "name": "Leather Jacket",
+      "price": 27.99,
+      "image": "assets/images/r1.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 2,
+      "name": "Dog Medal",
+      "price": 47.99,
+      "image": "assets/images/r2.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 3,
+      "name": "Leather Bracelet",
+      "price": 18.99,
+      "image": "assets/images/r3.png",
+      "simage": "assets/images/smallImage.png"
+    },
+    {
+      "id": 4,
+      "name": "Leather Jacket",
+      "price": 36.99,
+      "image": "assets/images/r1.png",
+      "simage": "assets/images/smallImage2.png"
+    },
+    {
+      "id": 5,
+      "name": "Dog Medal",
+      "price": 25.99,
+      "image": "assets/images/r2.png",
+      "simage": "assets/images/smallImage.png"
+    }
+  ]
+}
