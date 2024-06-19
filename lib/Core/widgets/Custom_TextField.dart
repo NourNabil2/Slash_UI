@@ -1,11 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slash/Core/Utils/constants.dart';
 import '../Utils/Colors.dart';
 
-class CustomFormTextField extends StatelessWidget {
-  CustomFormTextField({this.hintText, this.onChanged,});
+// ignore: must_be_immutable
+class Customtextfieldustomformtext extends StatelessWidget {
+  Customtextfieldustomformtext({super.key,
+    this.hintText,
+    this.onChanged,
+  });
   Function(String)? onChanged;
   String? hintText;
   @override
@@ -14,7 +16,9 @@ class CustomFormTextField extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: SizeApp.s24),
       child: Container(
         height: SizeApp.s45,
-        decoration: BoxDecoration(color: ColorApp.ksearchColor,borderRadius: BorderRadius.circular(SizeApp.s8)),
+        decoration: BoxDecoration(
+            color: ColorApp.ksearchColor,
+            borderRadius: BorderRadius.circular(SizeApp.s8)),
         child: TextField(
           cursorColor: ColorApp.ksecondaryColor,
           style: Theme.of(context).textTheme.bodySmall,
@@ -26,9 +30,7 @@ class CustomFormTextField extends StatelessWidget {
             ),
             hintText: hintText,
             hintStyle: Theme.of(context).textTheme.labelSmall,
-            border: const OutlineInputBorder(
-                borderSide: BorderSide.none
-            ),
+            border: const OutlineInputBorder(borderSide: BorderSide.none),
           ),
         ),
       ),

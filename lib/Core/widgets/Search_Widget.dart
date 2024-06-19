@@ -12,7 +12,7 @@ build_Search_Widget(context)
    child: Row(
       children: [
         Expanded(
-          child: CustomFormTextField(hintText: AppString.hintsearch,onChanged: (p0) {
+          child: Customtextfieldustomformtext(hintText: AppString.hintsearch,onChanged: (p0) {
           },),
         ),
         const SizedBox(width: SizeApp.s8,),

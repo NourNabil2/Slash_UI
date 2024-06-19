@@ -19,7 +19,8 @@ class HomeCubit extends Cubit<HomeState> {
   List recommended = [];
 
   Future<void> readjsona() async {
-    final String response = await rootBundle.loadString('lib/Features/Home_Screen/Model/dummyData.json');
+    final String response = await rootBundle
+        .loadString('lib/Features/Home_Screen/Model/dummyData.json');
     final data = await json.decode(response);
 
     bestSelling = data['bestSelling'];
@@ -27,37 +28,43 @@ class HomeCubit extends Cubit<HomeState> {
     recommended = data['recommendedForYou'];
   }
 
-
 // carousel_slider
   int currentPage = 0;
   List<Widget> ListBanner = [
-    Image.asset('assets/Hot Deal 1.png',width: double.infinity,height: double.infinity ,fit: BoxFit.fill,),
-    Image.asset('assets/Hot Deal 1.png',width: double.infinity,height: double.infinity ,fit: BoxFit.fill,),
+    Image.asset(
+      'assets/Hot Deal 1.png',
+      width: double.infinity,
+      height: double.infinity,
+      fit: BoxFit.fill,
+    ),
+    Image.asset(
+      'assets/Hot Deal 1.png',
+      width: double.infinity,
+      height: double.infinity,
+      fit: BoxFit.fill,
+    ),
   ];
-  void changePage(index)
-  {
-  currentPage = index;
-  emit(changePageState());
-}
-  BuildCarsoulIndicator()
-  {
+  void changePage(index) {
+    currentPage = index;
+    emit(changePageState());
+  }
+
+  BuildCarsoulIndicator() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for( int i=0; i < ListBanner.length; i++ )
+        for (int i = 0; i < ListBanner.length; i++)
           Container(
-            margin: const EdgeInsets.only(top: 14,left: 3,right: 3),
+            margin: const EdgeInsets.only(top: 14, left: 3, right: 3),
             height: 7,
-            width: i== currentPage ? 14 : 7,
+            width: i == currentPage ? 14 : 7,
             decoration: BoxDecoration(
-                color: i == currentPage ? ColorApp.ksecondaryColor : ColorApp.ksearchColor,
-                borderRadius: BorderRadius.circular(SizeApp.s8)
-            ),
+                color: i == currentPage
+                    ? ColorApp.ksecondaryColor
+                    : ColorApp.ksearchColor,
+                borderRadius: BorderRadius.circular(SizeApp.s8)),
           )
       ],
     );
   }
-
-
-
 }

@@ -16,56 +16,50 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
-
   Widget build(BuildContext context) {
-
-
     return MaterialApp(
       theme: themeApp(context),
       home: PersistentTabView(
-navBarHeight: SizeApp.s72,
-       tabs: [
-          PersistentTabConfig(
-            screen: BlocProvider(
-              create: (context) => HomeCubit()..readjsona(),
-              child: const Homepage(),
+          navBarHeight: SizeApp.s72,
+          tabs: [
+            PersistentTabConfig(
+              screen: BlocProvider(
+                create: (context) => HomeCubit()..readjsona(),
+                child: const Homepage(),
+              ),
+              item: ItemConfig(
+                activeForegroundColor: ColorApp.ksecondaryColor,
+                icon: IconsApp.khome,
+                title: AppString.khome,
+              ),
             ),
-            item: ItemConfig(
-              activeForegroundColor: ColorApp.ksecondaryColor,
-              icon: IconsApp.khome,
-              title: AppString.khome,
+            PersistentTabConfig(
+              screen: Container(),
+              item: ItemConfig(
+                activeForegroundColor: ColorApp.ksecondaryColor,
+                icon: IconsApp.kFav,
+                title: AppString.kFav,
+              ),
             ),
-          ),
-          PersistentTabConfig(
-            screen: Container(),
-            item: ItemConfig(
-              activeForegroundColor: ColorApp.ksecondaryColor,
-              icon:  IconsApp.kFav,
-              title: AppString.kFav,
+            PersistentTabConfig(
+              screen: Container(),
+              item: ItemConfig(
+                activeForegroundColor: ColorApp.ksecondaryColor,
+                icon: IconsApp.kcart,
+                title: AppString.kcarts,
+              ),
             ),
-          ),
-          PersistentTabConfig(
-            screen: Container(),
-            item: ItemConfig(
-              activeForegroundColor: ColorApp.ksecondaryColor,
-              icon: IconsApp.kcart,
-              title: AppString.kcarts,
+            PersistentTabConfig(
+              screen: Container(),
+              item: ItemConfig(
+                activeForegroundColor: ColorApp.ksecondaryColor,
+                icon: IconsApp.kprofile,
+                title: AppString.kprofile,
+              ),
             ),
-          ),
-          PersistentTabConfig(
-            screen: Container(),
-            item: ItemConfig(
-              activeForegroundColor: ColorApp.ksecondaryColor,
-              icon: IconsApp.kprofile,
-              title: AppString.kprofile,
-            ),
-          ),
-
-        ],
-
-        navBarBuilder: (navBarConfig) => Style4BottomNavBar(
-            navBarConfig: navBarConfig)
-      ),
+          ],
+          navBarBuilder: (navBarConfig) =>
+              Style4BottomNavBar(navBarConfig: navBarConfig)),
     );
   }
 }
