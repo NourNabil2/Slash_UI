@@ -28,7 +28,7 @@ navBarHeight: SizeApp.s72,
           PersistentTabConfig(
             screen: BlocProvider(
               create: (context) => HomeCubit()..readjsona(),
-              child: const HomePage(),
+              child: const homePage(),
             ),
             item: ItemConfig(
               activeForegroundColor: ColorApp.ksecondaryColor,
