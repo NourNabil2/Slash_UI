@@ -1,17 +1,18 @@
 # slash
+A flutter UI Task for Slash Internship 
+Develop a responsive UI for the Home Screen that adapts seamlessly to both mobile and 
+web platforms,
 
-A new Flutter project.
+# ⚙ Technical Details
+- State Management: Cubit for managing state across the application.
+- Architecture: MVVM pattern to separate concerns.
+- Responsive Design: LayoutBuilder, MediaQuery.
+- Flutter Widgets:
+    o Mobile layout: Column, SingleChildScrollView.
+    o Web layout: GridView,
 
-## Getting Started
+# 📸 View UI
+![Code Alpha Internship completion certificate](https://github.com/NourNabil2/Slash_UI/blob/main/review.png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# Slash_UI
+   ## Contact
+Created by [@Nour Nabil](https://www.linkedin.com/in/nour-nabil-615330217/) - feel free to contact me!
