@@ -25,8 +25,11 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: SizeApp.s72),
             child: Column(
               children: [
+                // App Bar for application
                 buildAppBar(context),
+                // search bar
                 build_Search_Widget(context),
+                // Carsoul slider
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: Responsive.isMobile(context) ?  SizeApp.s24 : SizeWeb.s48),
                   child: CarouselSlider(items: cubit.ListBanner,
@@ -35,12 +38,16 @@ class HomePage extends StatelessWidget {
                       },) ),
                 ),
                 cubit.BuildCarsoulIndicator(),
+                // Categories
                 BuildTitleApp(context,AppString.categ),
                 buildCategories(context),
+                // Best Saller
                 BuildTitleApp(context,AppString.best_S),
                 Responsive(mobile: BuildListView(context: context,product_list: cubit.bestSelling), desktop: BuildListView_Web(context: context,product_list: cubit.bestSelling),) ,
+                // New Arrival
                 BuildTitleApp(context,AppString.new_A),
                 Responsive(mobile: BuildListView(context: context,product_list: cubit.newArrival), desktop: BuildListView_Web(context: context,product_list: cubit.newArrival),) ,
+                // Recommended for you
                 BuildTitleApp(context,AppString.recommended),
                 Responsive(mobile: BuildListView(context: context,product_list: cubit.recommended), desktop: BuildListView_Web(context: context,product_list: cubit.recommended),) ,
 
