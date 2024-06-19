@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:slash/Core/Utils/constants.dart';
 import '../Utils/Colors.dart';
 
@@ -18,6 +20,10 @@ class CustomFormTextField extends StatelessWidget {
           style: Theme.of(context).textTheme.bodySmall,
           onChanged: onChanged,
           decoration: InputDecoration(
+            prefixIcon: Padding(
+              padding: const EdgeInsets.all(SizeApp.s12),
+              child: IconsApp.ksearch,
+            ),
             hintText: hintText,
             hintStyle: Theme.of(context).textTheme.labelSmall,
             border: const OutlineInputBorder(

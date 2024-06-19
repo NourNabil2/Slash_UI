@@ -15,5 +15,7 @@ class ColorApp
 
   //other
   static const knotification = Color(0xffC12222);
+  static const kseeall = Color(0xffE6E6E6);
+  static const kFaV = Color(0xffEEEEEE);
 
 }
