@@ -40,7 +40,7 @@ git clone https://github.com/NourNabil2/Slash_UI.git
 
 1. Connect your device or start an emulator.
 
-2. To build and run the project directly Download Apk:  [@Link Github](https://github.com/NourNabil2/Slash_UI/blob/main/app-release.apk) or  [@GoogleDrive](https://drive.google.com/file/d/17mC4C-y6F6blhr14ndX4oWMnOXqr0-mH/view?usp=drive_link)
+2. To build and run the project directly Download Apk:  [@Link Github](https://github.com/NourNabil2/Slash_UI/blob/main/app-release.apk) or  [@GoogleDrive](https://drive.google.com/file/d/1Gf3kxDpHtPoIlgGg2e8ll5xDDX7Ez434/view?usp=sharing)
 
    ## Contact
 Created by [@Nour Nabil](https://www.linkedin.com/in/nour-nabil-615330217/) - feel free to contact me!
