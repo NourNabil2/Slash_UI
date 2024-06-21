@@ -19,23 +19,48 @@ web platforms,
 Follow these steps to install and run ProjectName on your system.
 
 ### Clone the Repository
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/NourNabil2/Slash_UI.git
 
-1. Open your terminal or command prompt.
+2. **Navigate to the project directory:**
+    ```bash
+    cd slash
 
-2. Use the following command to clone the ProjectName repository:
-git clone https://github.com/NourNabil2/Slash_UI.git
-
-### Configuration
-
-1. Change your working directory to the cloned repository: cd Slash_UI
-
-2. Install the required dependencies using:
+3. **Install dependencies**
+    ```bash
+    flutter pub get
+    
+ Install the required dependencies:
  - bloc:
  - flutter_bloc:
  - flutter_svg: ^2.0.10+1
  - carousel_slider:
  - persistent_bottom_nav_bar_v2: ^5.2.3
 
+### Running the project
+
+1. **for mobile:**
+    ```bash
+    flutter run
+
+2. **for web:**
+    ```bash
+    flutter run -d chrome
+
+### Project Structure
+    lib/
+    |-- Core/
+    |   |-- Utilts/
+    |-- Features/
+    |   |-- HomeScreen/
+    |       |-- Model/
+    |       |-- view/
+    |           |-- screens/
+    |           |-- widget/
+    |       |--viewModel/
+    |-- main.dart
+    
 ### Build and Run
 
 1. Connect your device or start an emulator.
