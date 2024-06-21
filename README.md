@@ -25,7 +25,7 @@ Follow these steps to install and run ProjectName on your system.
 
 2. **Navigate to the project directory:**
     ```bash
-    cd slash
+    cd Slash_UI
 
 3. **Install dependencies**
     ```bash
