@@ -4,7 +4,7 @@ import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 import 'package:slash/Core/Utils/constants.dart';
 import 'Core/Utils/Colors.dart';
 import 'Core/Utils/ThemeData.dart';
-import 'Features/Home_Screen/View/Home_Screen.dart';
+import 'Features/Home_Screen/View/Screens/Home_Screen.dart';
 import 'Features/Home_Screen/ViewModel/home_cubit.dart';
 
 void main() {

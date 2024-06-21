@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:slash/Core/Utils/Colors.dart';
 import 'package:slash/Core/Utils/constants.dart';
-import '../Utils/Colors.dart';
 
 // ignore: must_be_immutable
 class Customtextfieldustomformtext extends StatelessWidget {

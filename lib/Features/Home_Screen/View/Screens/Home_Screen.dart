@@ -4,11 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash/Core/Utils/Colors.dart';
 import 'package:slash/Core/Utils/constants.dart';
 import 'package:slash/Core/Utils/responsive.dart';
-import 'package:slash/Core/widgets/AppBar_Widget.dart';
-import 'package:slash/Core/widgets/Categories_Widget.dart';
-import 'package:slash/Core/widgets/Custom_List_Widget.dart';
-import 'package:slash/Core/widgets/Search_Widget.dart';
-import 'package:slash/Core/widgets/Title_App_Widget.dart';
+import 'package:slash/Features/Home_Screen/View/widgets/AppBar_Widget.dart';
+import 'package:slash/Features/Home_Screen/View/widgets/Categories_Widget.dart';
+import 'package:slash/Features/Home_Screen/View/widgets/Custom_List_Widget.dart';
+import 'package:slash/Features/Home_Screen/View/widgets/Search_Widget.dart';
+import 'package:slash/Features/Home_Screen/View/widgets/Title_App_Widget.dart';
 import 'package:slash/Features/Home_Screen/ViewModel/home_cubit.dart';
 
 class Homepage extends StatelessWidget {
